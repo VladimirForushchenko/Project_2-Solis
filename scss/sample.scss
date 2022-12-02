@@ -1,0 +1,83 @@
+// ==BACKGROUND and IMG======================================================
+
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+//Чтобы вывести картинку нужно задать нижний паддинг в %: высоту делим на ширину *100%
+
+.img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+// адаптация любой картинки
+
+
+// ==BUTTONS======================================================
+
+.button {
+  background: orange;
+  border-radius: 37px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 150%;
+  padding: 5px 35px;
+}
+
+// ==padding inside the block=====================================
+.block > *:not(:last-child) {
+margin: 0px 0px 0px 0px;
+}
+
+// Перестроить 3 блока при уменьшении экрана======
+@media (min-width: 475px) {
+  .flex-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.flex-column {
+  flex: 0 1 33.333%;
+}
+@media (max-width: 992px) {
+  .flex-column {
+    flex: 0 1 50%;
+  }
+  .flex-column:last-child {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .flex-column {
+    flex: 0 1 100%;
+  }
+}
+
+// Выровнять текст сверху в блоке с картинкой снизу==================
+.info-block {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+} 
+.info-block__content {
+  flex: 1 1 auto;
+}
+
+// Если у нас ссылка, то отступы работать не будут, делаем классу ссылки display: inline-block
+// lineheight задаём в процентах. Делим lineheight на font-size * 100%
+
