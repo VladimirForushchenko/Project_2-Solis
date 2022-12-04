@@ -20,28 +20,42 @@
 
   <header class="header">
     <div class="header__wrapper wrapper">
-      <section class="logo">
-        <a href="#" class="logo">
-          <div class="logo__img">
+      <section class="header__logo_container">
+        <a href="#" class="header__logo">
+          <div class="header__logo_icon">
             <img src="./img/logo.png" alt="logo">
           </div>
-          <div class="logo__name">
+          <div class="header__logo_name">
             <h3>Solis</h3>
           </div>
         </a>
       </section>
-      <nav class="nav">
-        <ul class="nav__items" id="nav__items">
-          <li class="nav__item">Home</li>
-          <li class="nav__item">About</li>
-          <li class="nav__item">Products</li>
-          <li class="nav__item">Use Cases</li>
-          <li class="nav__item">Pricing</li>
-          <li class="nav__item">Resources</li>
-          <li class="nav__menu" id="menu">&#9776;
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li>
+            <a href="" class="header__link">Home</a>
+          </li>
+          <li>
+            <a href="" class="header__link">About</a>
+          </li>
+          <li>
+            <a href="" class="header__link">Products</a>
+          </li>
+          <li>
+            <a href="" class="header__link">Use Cases</a>
+          </li>
+          <li>
+            <a href="" class="header__link">Pricing</a>
+          </li>
+          <li>
+            <a href="" class="header__link">Resources</a>
+          </li>
         </ul>
+        <div class="header__burger-icon">
+          <!-- <span class="header__burger-icon">&#9776;</span> -->
+          <span></span>
+        </div>
         <div class="switch__theme">
-          <img src="./img/icon-moon.png" alt="icon-moon" class="switch__themeicon">
         </div>
       </nav>
     </div>
@@ -61,7 +75,7 @@
         <picture class="statistic__img">
           <img src="./img/statistic-image.png" alt="statistic-image">
         </picture>
-        <div class="statistic__desc">
+        <div class="statistic__desc desc-black">
           <div class="statistic__desc_leftbar leftbar">
             <div class="leftbar__block">
               <p class="leftbar__block_title"> <span>$</span>1 tril</p>
@@ -189,7 +203,7 @@
             </form>
           </div>
         </div>
-        <div class="exchange__rightbar">
+        <div class="exchange__rightbar desc-black">
           <ul class="exchange__rightbar_items">
             <li class="exchange__rightbar_item item_text">
               <h4 class="item_text-title">On-Exchange Trading</h4>
@@ -296,7 +310,7 @@
             <input type="text" class="input input-name" placeholder="Your name">
             <input type="email" class="input input-mail" placeholder="Email">
             <input type="text" class="input input-more" placeholder="Tell more">
-            <button type="submit" class="btn inout-btn">Send Request</button>
+            <button type="submit" class="btn input-btn">Send Request</button>
           </div>
         </div>
       </section>
