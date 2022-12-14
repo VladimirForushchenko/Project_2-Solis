@@ -68,7 +68,9 @@
           <h2 class="info__title">A peer-to-peer stablecoin <span>clearinghouse</span> for the new economy</h2>
           <h4 class="info__subtitle">We are bringing real solutions to the payments world by leveraging public
             blockchains.</h4>
-          <button class="btn">Join now</button>
+          <a href="#send-request">
+            <button class="btn">Join now</button>
+          </a>
         </div>
       </section>
       <section class="statistic">
@@ -103,7 +105,9 @@
                 The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and
                 accessibility which are currently preventing the stablecoin market from reaching critical mass.
               </p>
-              <button class="btn">Contact Sales</button>
+              <a href="#send-request">
+                <button class="btn">Contact Sales</button>
+              </a>
             </div>
           </div>
       </section>
@@ -172,20 +176,24 @@
               </div>
               <div class="rate">
                 <p class="rate__text">Rate:</p>
-                <p class="rate__cost">10127. <span>49</span></p>
+                <p class="rate__cost">127. <span>49</span></p>
               </div>
               <div class="change-bar">
                 <div class="container__pay container">
                   <p class="container__title">Pay:</p>
-                  <input type="number" class="container__title_inpt">
+                  <input type="number" class="container__title_inpt" id="pay" max="100" required>
                   <picture class="container__title_icon">
                     <img src="./img/icon-bitcoin.svg" alt="bitcoin">
                   </picture>
+
+                  <p id="demo"></p>
+
                 </div>
                 <div class="container__receive container">
                   <p class="container__title">Receive:</p>
-                  <input type="number" class="container__title_inpt">
-                  <picture class="container__title_icon">
+                  <p class="container__title_inpt receieve" id="recieve">0
+                  </p>
+                  <picture class="container__title_icon receieve_icon">
                     <img src="./img/icon-tcoin.png" alt="tcoin">
                   </picture>
                 </div>
@@ -223,7 +231,9 @@
               </h6>
             </li>
             <li class="exchange__rightbar_item item_btn">
-              <button class="btn">Join now</button>
+              <a href="#send-request">
+                <button class="btn">Join now</button>
+              </a>
             </li>
           </ul>
         </div>
@@ -306,12 +316,13 @@
                 possible.</h4>
             </div>
           </div>
-          <div class="contact__form">
-            <input type="text" class="input input-name" placeholder="Your name">
-            <input type="email" class="input input-mail" placeholder="Email">
+          <form action="" method="get" class="contact__form" id="send-request">
+            <input type="text" class="input input-name" placeholder="Your name" required>
+            <input type="email" class="input input-mail" placeholder="Email" required>
             <input type="text" class="input input-more" placeholder="Tell more">
-            <button type="submit" class="btn input-btn">Send Request</button>
-          </div>
+            <button type="submit" class="btn input-btn" id="inpt-btn">Send Request</button>
+
+          </form>
         </div>
       </section>
     </div>
