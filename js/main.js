@@ -4,20 +4,16 @@
 
 let switchTheme = document.querySelector('.switch__theme');
 let darkBody = document.querySelector('html');
-let darkStatistic = document.querySelector('.desc-black');
+let darkStatistic = document.querySelectorAll('.desc-black');
 let darkBckgr = document.querySelector('.main');
-
-console.log(darkStatistic);
 
 switchTheme.addEventListener('click', function () {
   darkBody.classList.toggle('dark_body');
-  darkStatistic.classList.toggle('dark-bckgrn');
-  darkBckgr.classList.toggle('bckgrn_dark');
+  darkBckgr.classList.toggle('dark');
 
-  //!!!!!!!!!!!!!!!! У меня есть 2 блока с классом desc-black, но при событии бэкграунд меняется только у одного. КАКОГО ХУЯ?
-
-  // !!!!!!!!!!!! Класс bckgrn_dark добавляется, но стили не подтягиваются. КАКОГО ХУЯ?
-
+  for( let i = 0; i < darkStatistic.length; i++){
+  darkStatistic[i].classList.toggle('dark-bckgrn');
+  } 
 })
 
 // Readmore =============================================
@@ -53,12 +49,19 @@ let valueInpt = document.querySelector('#pay');
 let recieve = document.querySelector('#recieve');
 let rate = 127.49;
 
-valueInpt.addEventListener('input', function (e) {
+valueInpt.addEventListener('input', function () {
+
   let recieveResult = valueInpt.value * rate;
-  console.log(recieveResult, e.target);
 
   recieve.innerHTML = `${recieveResult.toFixed(1)}`;
 
+  if (valueInpt.value > 1000) {
+    let txt = "";
+    txt = "Value is to large";
+    document.getElementById("demo").innerHTML = txt;
+  } else if (valueInpt.value < 1000) {
+    document.getElementById("demo").innerHTML = '';
+  }
 })
 
 // Send Request =======================================
@@ -82,23 +85,3 @@ function saveContact() {
   localStorage.setItem('e-mail', userMail);
   localStorage.setItem('more info', userMore);
 }
-
-
-// !!!!!!! НЕ РАБОТАЕТ!! КАКОГО ХУЯ????
-
-function myFunction() {
-  var txt = "";
-  if (document.getElementById("pay").validity.rangeOverflow) {
-    txt = "Значение слишком большое";
-
-    console.log('###', !!e.target.validity.rangeOverflow);
-  }
-
-  // if (Number(document.getElementById("pay").value) > 100) {
-  //   txt = "Значение слишком большое";
-  // }
-
-  document.getElementById("demo").innerHTML = txt;
-}
-
-
