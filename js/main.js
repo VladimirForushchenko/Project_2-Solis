@@ -72,9 +72,7 @@ let inptName = document.querySelector('.input-name');
 let inptMail = document.querySelector('.input-mail');
 let inptMore = document.querySelector('.input-more');
 
-sendRequest.addEventListener('click', function (e) {
-  saveContact();
-})
+sendRequest.addEventListener('click', saveContact);
 
 function saveContact() {
   let userName = inptName.value;
@@ -83,5 +81,5 @@ function saveContact() {
 
   localStorage.setItem('name', userName);
   localStorage.setItem('e-mail', userMail);
-  localStorage.setItem('more info', userMore);
+  localStorage.setItem('moreinfo', userMore);
 }
